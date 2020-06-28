@@ -9,7 +9,7 @@
   .btn-line {
     width: 28px;
     height: 3px;
-    background-color: #fff;
+    background-color: set-text-color($primary_color);
     margin: 0px 0px 5px 0px;
     @include easeOut;
   }
@@ -88,10 +88,10 @@
     position: relative;
     font-size: 30px;
     padding: 1rem 0;
-    font-weight: 300;
+    font-weight: 400;
     text-transform: uppercase;
     text-decoration: none;
-    color: #fff;
+    color: set-text-color($primary_color);
     @include easeOut;
 
     &:hover {

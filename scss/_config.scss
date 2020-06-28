@@ -3,6 +3,7 @@ $secondary_color: #eece1a;
 $show-home-image: true;
 $home-image: url(../img/keyboard_background.png);
 $background-opacity: 0.9;
+$footer-height: 40px;
 
 @mixin easeOut {
   transition: all 0.5s ease-in-out;
@@ -47,5 +48,13 @@ $background-opacity: 0.9;
 @mixin mediaXl {
   @media screen and (min-width: 1171px) {
     @content;
+  }
+}
+
+@function set-text-color($color) {
+  @if (lightness($color) >40) {
+    @return #000;
+  } @else {
+    @return #fff;
   }
 }

@@ -10,6 +10,17 @@
       line-height: 1;
       margin-bottom: 1rem;
     }
+
+    .about-info {
+      display: grid;
+      grid-template-areas:
+        "bioimage"
+        "bio"
+        "experience"
+        "education"
+        "skills";
+      grid-template-columns: 1fr;
+    }
   }
   .menu-branding,
   .menu-nav {

@@ -66,7 +66,7 @@
     position: relative;
     font-size: 30px;
     padding: 1rem 0;
-    font-weight: 300;
+    font-weight: 400;
     text-transform: uppercase;
     text-decoration: none;
     color: #fff;
@@ -85,37 +85,9 @@
       border: solid 3px #eece1a;
       border-radius: 50%; }
 
-@media screen and (max-width: 768px) {
-  main {
-    align-items: center;
-    text-align: center; }
-    main h1 {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  .menu-branding,
-  .menu-nav {
-    float: none;
-    width: 100%; }
-  .menu-branding {
-    transform: translate3d(-100%, 0, 0);
-    height: 30vh; }
-    .menu-branding .portrait {
-      background: url(../img/portrait_small.png);
-      width: 150px;
-      height: 150px; }
-  .menu-nav {
-    transform: translate3d(100%, 0, 0);
-    height: 70vh; } }
-
-@media screen and (max-width: 500px) {
-  h1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center; } }
-
 body {
   background-color: #444;
-  color: white;
+  color: #fff;
   height: 100%;
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -167,7 +139,8 @@ header {
   color: #eece1a; }
 
 main {
-  padding: 4rem; }
+  padding: 4rem;
+  min-height: calc(100vh - 40px); }
   main .icons {
     margin-top: 1rem; }
     main .icons a {
@@ -179,3 +152,65 @@ main {
     overflow: hidden; }
     main#home h1 {
       margin-top: 20vh; }
+  main .about-info {
+    display: grid;
+    grid-template-areas: "bioimage bio bio" "experience education skills";
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px; }
+    main .about-info .bio-image {
+      grid-area: bioimage;
+      border: 3px solid #eece1a;
+      border-radius: 50%; }
+    main .about-info .bio {
+      grid-area: bio;
+      font-size: 1.5rem; }
+    main .about-info .experience {
+      grid-area: experience; }
+    main .about-info .education {
+      grid-area: education; }
+    main .about-info .skills {
+      grid-area: skills; }
+    main .about-info .experience,
+    main .about-info .education,
+    main .about-info .skills {
+      background-color: #515151;
+      border-bottom: 3px solid #eece1a; }
+
+.about-footer {
+  background-color: #2b2b2b;
+  color: #fff;
+  text-align: center;
+  height: 40px;
+  line-height: 40px; }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main h1 {
+      line-height: 1;
+      margin-bottom: 1rem; }
+    main .about-info {
+      display: grid;
+      grid-template-areas: "bioimage" "bio" "experience" "education" "skills";
+      grid-template-columns: 1fr; }
+  .menu-branding,
+  .menu-nav {
+    float: none;
+    width: 100%; }
+  .menu-branding {
+    transform: translate3d(-100%, 0, 0);
+    height: 30vh; }
+    .menu-branding .portrait {
+      background: url(../img/portrait_small.png);
+      width: 150px;
+      height: 150px; }
+  .menu-nav {
+    transform: translate3d(100%, 0, 0);
+    height: 70vh; } }
+
+@media screen and (max-width: 500px) {
+  h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; } }
