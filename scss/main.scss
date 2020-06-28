@@ -1,6 +1,6 @@
 @import "config";
 @import "menu";
-
+@import "mobile";
 body {
   @include background;
   background-color: $primary_color;
@@ -9,6 +9,7 @@ body {
   margin: 0;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5;
+  min-width: 320px;
 }
 
 * {
@@ -19,6 +20,7 @@ h1,
 h2,
 h3 {
   margin: 0;
+
   font-weight: 400;
 
   &.lg-heading {
@@ -53,9 +55,9 @@ main {
     margin-top: 1rem;
     a {
       padding: 0.4rem;
+      @include easeOut();
       &:hover {
         color: $secondary_color;
-        @include easeOut();
       }
     }
   }
