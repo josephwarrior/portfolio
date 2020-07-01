@@ -200,6 +200,26 @@ main {
       background-color: black; }
     main .projects .btn-light {
       background-color: #5e5e5e; }
+  main .contact-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 3rem; }
+    main .contact-boxes div {
+      border: 2px solid #fff;
+      padding: 0.5rem 1.5rem;
+      margin: 1.5rem 1rem;
+      font-size: 1.5rem;
+      transition: all 0.5s ease-in-out; }
+      main .contact-boxes div:hover {
+        cursor: pointer;
+        padding: 1.5rem 2.5rem;
+        margin: 0.5rem 0rem;
+        background-color: #eece1a;
+        color: #000; }
+        main .contact-boxes div:hover span {
+          color: #000; }
 
 .about-footer {
   background-color: #2b2b2b;
