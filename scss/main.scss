@@ -81,6 +81,7 @@ main {
       grid-area: bioimage;
       border: 3px solid $secondary_color;
       border-radius: 50%;
+      justify-self: center;
     }
     .bio {
       grid-area: bio;
@@ -100,6 +101,40 @@ main {
     .skills {
       background-color: lighten($primary_color, 5);
       border-bottom: 3px solid $secondary_color;
+    }
+  }
+
+  .projects {
+    display: grid;
+    gap: 20px;
+    img {
+      width: 100%;
+      height: auto;
+      border: 3px solid #fff;
+      @include easeOut;
+      &:hover {
+        opacity: 0.6;
+        border-color: $secondary_color;
+      }
+    }
+    .btn {
+      display: block;
+      padding: 0.5rem 1rem;
+      margin-bottom: 0.3rem;
+      border: 0;
+      @include easeOut;
+      &:hover {
+        background-color: $secondary_color;
+        color: set-text-color($secondary_color);
+      }
+    }
+    .btn-dark {
+      @extend .btn;
+      background-color: darken($primary_color, 50);
+    }
+    .btn-light {
+      @extend .btn;
+      background-color: lighten($primary_color, 10);
     }
   }
 }

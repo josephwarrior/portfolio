@@ -1,6 +1,12 @@
 @include mediaXl {
+  .projects {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 @include mediaLg {
+  .projects {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 @include mediaMd {
   main {
@@ -20,6 +26,10 @@
         "education"
         "skills";
       grid-template-columns: 1fr;
+    }
+
+    .projects {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
   .menu-branding,
@@ -42,9 +52,15 @@
   }
 }
 @include mediaSm {
-  h1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  main {
+    h1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .projects {
+      grid-template-columns: 1fr;
+    }
   }
 }
