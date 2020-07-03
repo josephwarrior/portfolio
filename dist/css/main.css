@@ -138,7 +138,6 @@ header {
   color: #eece1a; }
 
 main {
-  padding: 4rem;
   min-height: calc(100vh - 40px); }
   main .icons {
     margin-top: 1rem; }
@@ -200,10 +199,11 @@ main {
     main .projects .btn-light {
       background-color: #5e5e5e; }
   main .contact-boxes {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: center; */
+    display: grid;
     margin-bottom: 3rem; }
     main .contact-boxes div {
       border: 2px solid #fff;
@@ -228,15 +228,24 @@ main {
   line-height: 40px; }
 
 @media screen and (min-width: 1171px) {
-  .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+  main {
+    padding: 4rem; }
+    main .projects {
+      grid-template-columns: repeat(4, 1fr); }
+    main .contact-boxes {
+      grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
-  .projects {
-    grid-template-columns: repeat(3, 1fr); } }
+  main {
+    padding: 4rem; }
+    main .projects {
+      grid-template-columns: repeat(3, 1fr); }
+    main .contact-boxes {
+      grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 768px) {
   main {
+    padding: 4rem;
     align-items: center;
     text-align: center; }
     main h1 {
@@ -248,6 +257,8 @@ main {
       grid-template-columns: 1fr; }
     main .projects {
       grid-template-columns: repeat(2, 1fr); }
+    main .contact-boxes {
+      grid-template-columns: 1fr; }
   .menu-branding, .menu-nav {
     float: none;
     width: 100%; }
@@ -263,9 +274,29 @@ main {
     height: 70vh; } }
 
 @media screen and (max-width: 500px) {
-  main h1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center; }
-  main .projects {
-    grid-template-columns: 1fr; } }
+  main {
+    padding: 1rem; }
+    main h1,
+    main h2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      main h1.lg-heading,
+      main h2.lg-heading {
+        font-size: 3rem; }
+      main h1.sm-heading,
+      main h2.sm-heading {
+        font-size: 1.2rem; }
+    main .projects {
+      grid-template-columns: 1fr; }
+    main .contact-boxes div {
+      padding: 0.5rem 0.5rem;
+      margin: 1.5rem 1rem;
+      font-size: 1rem; }
+      main .contact-boxes div:hover {
+        padding: 1.5rem 1rem;
+        margin: 0.5rem 0.5rem;
+        background-color: #eece1a;
+        color: #000; }
+        main .contact-boxes div:hover span {
+          color: #000; } }

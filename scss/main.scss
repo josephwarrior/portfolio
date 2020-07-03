@@ -47,7 +47,7 @@ header {
 }
 
 main {
-  padding: 4rem;
+  //padding: 4rem;
   min-height: calc(100vh - #{$footer-height});
   .icons {
     margin-top: 1rem;
@@ -137,10 +137,12 @@ main {
   }
 
   .contact-boxes {
-    display: flex;
+    /* display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: center; */
+    display: grid;
+
     margin-bottom: 3rem;
     div {
       border: 2px solid #fff;

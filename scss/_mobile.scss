@@ -1,15 +1,28 @@
 @include mediaXl {
-  .projects {
-    grid-template-columns: repeat(4, 1fr);
+  main {
+    padding: 4rem;
+    .projects {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    .contact-boxes {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }
 @include mediaLg {
-  .projects {
-    grid-template-columns: repeat(3, 1fr);
+  main {
+    padding: 4rem;
+    .projects {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .contact-boxes {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 }
 @include mediaMd {
   main {
+    padding: 4rem;
     align-items: center;
     text-align: center;
     h1 {
@@ -30,6 +43,10 @@
 
     .projects {
       grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-boxes {
+      grid-template-columns: 1fr;
     }
   }
   .menu-branding,
@@ -53,14 +70,40 @@
 }
 @include mediaSm {
   main {
-    h1 {
+    padding: 1rem;
+    h1,
+    h2 {
       display: flex;
       flex-direction: column;
       align-items: center;
+      &.lg-heading {
+        font-size: 3rem;
+      }
+      &.sm-heading {
+        font-size: 1.2rem;
+      }
     }
 
     .projects {
       grid-template-columns: 1fr;
+    }
+
+    .contact-boxes {
+      div {
+        padding: 0.5rem 0.5rem;
+        margin: 1.5rem 1rem;
+        font-size: 1rem;
+        &:hover {
+          padding: 1.5rem 1rem;
+          margin: 0.5rem 0.5rem;
+          background-color: $secondary_color;
+          color: set-text-color($secondary_color);
+
+          span {
+            color: set-text-color($secondary_color);
+          }
+        }
+      }
     }
   }
 }
